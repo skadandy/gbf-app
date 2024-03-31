@@ -12,8 +12,20 @@ const evoker = useEvokerStore()
         <input
           v-model.number="evoker.materialInfo[item]"
           w-40px border-1 border-slate-600 rounded bg-inherit pr-2px text-right text-12px
+          type="number"
         >
       </div>
     </div>
   </el-card>
 </template>
+
+<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+</style>
